@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: "mdillon/postgis:${POSTGRES_VERSION}"
+    restart: always
+    volumes:
+      - "${POSTGRES_DATA_HOST}:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${POSTGRES_DB}"
+    ports:
+      - "${POSTGRES_PORT_HOST}:5432"
