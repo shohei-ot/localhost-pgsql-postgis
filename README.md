@@ -15,8 +15,6 @@ cp .env.example .env
 
 ```sh
 docker-compose up
-# OR
-docker-compose up -d
 ```
 
 ## Stop
